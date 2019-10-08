@@ -1,0 +1,8 @@
+build
+deploy
+compile/env_settings.py
+
+.DS_Store
+.clang_complete
+__pycache__
+*~
