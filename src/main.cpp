@@ -164,7 +164,7 @@ void GameUpdateAndRender(const ThreadContext* thread, const PlatformFunctions* p
 
 		CXIndex index = clang_createIndex(0, 0);
 		CXTranslationUnit unit = clang_parseTranslationUnit(
-			index, "data/other/momsrvr.m.cpp", nullptr, 0,
+			index, "data/other/test.cpp", nullptr, 0,
 			nullptr, 0,
 			CXTranslationUnit_None
 		);
