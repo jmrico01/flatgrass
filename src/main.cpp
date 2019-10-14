@@ -15,11 +15,28 @@
 #undef STB_SPRINTF_IMPLEMENTATION
 #include <stb_sprintf.h>
 
+#include <vector>
+
 #include "imgui.h"
 #include "opengl.h"
 #include "opengl_funcs.h"
 #include "opengl_base.h"
 #include "post.h"
+
+struct ASTNode
+{
+	std::string usr;
+	std::vector<ASTNode> children;
+};
+
+struct AST
+{
+	ASTNode root;
+
+	void AddNode(std::string name, std::string parent)
+	{
+	}
+};
 
 void GameUpdateAndRender(const ThreadContext* thread, const PlatformFunctions* platformFuncs,
 	const GameInput* input, ScreenInfo screenInfo, float32 deltaTime,
@@ -172,6 +189,7 @@ void GameUpdateAndRender(const ThreadContext* thread, const PlatformFunctions* p
 			DEBUG_PANIC("Failed to parse translation unit");
 		}
 
+		AST ast;
 		CXCursor cursor = clang_getTranslationUnitCursor(unit);
 		clang_visitChildren(
 			cursor,
