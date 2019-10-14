@@ -1,6 +1,3 @@
-# Kid
+# Flatgrass
 
-NOTE: Linux
-required packages
-- freeglut3-dev (OpenGL headers)
-- xorg-dev (X11 libraries)
+Sandbox repository for non-game Kapricorn Media applications.
